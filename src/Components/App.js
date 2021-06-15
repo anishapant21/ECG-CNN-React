@@ -1,17 +1,20 @@
 import React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
 import Login from './Login';
 import Navbar from './Navbar';
+import "../css/App.css"
+
+
 
 const App =() =>{
+    
     return (
-        <ChakraProvider>
-            
-            <Navbar />
-        <Login />
+        <div > 
+             <Login />
 
-        </ChakraProvider>
-  
+        </div>
+               
+
+           
     );
 
 };
