@@ -57,22 +57,22 @@ const Navbar = () => {
         style={{ marginLeft: "200px", marginRight: "2px" }}
         className="menu item"
       >
-        <button
-          style={{ fontSize: "18px" , marginTop:'5px', marginLeft:'90px'}}
-          className="ui red button"
-        >
-            
-          {" "}
-          History
-        </button>
-        <i style={{fontSize:"30px", marginTop:"20px", marginLeft:'20px'}} className="fas fa-sign-out-alt"></i>
-        
-        
+       
+    
       </div>
     </div>
   );
 };
 
 export default Navbar;
+{/* <button
+style={{ fontSize: "18px" , marginTop:'5px', marginLeft:'90px'}}
+className="ui basic red button"
+>
+  
+{" "}
+History
+</button> */}
+{/* <i style={{fontSize:"30px", marginTop:"20px", marginLeft:'20px'}} className="fas fa-sign-out-alt"></i> */}
 
 

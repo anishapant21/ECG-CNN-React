@@ -1,18 +1,19 @@
 import React from "react";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router-dom';
+
 
 const Login = () => {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
-  const [email, setEmail] = useState("");
-
+  //for the form
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => {
-    setName(data.name);
-    setAge(data.age);
-    setEmail(data.email);
-    
+  //for routing
+  const history=useHistory();
+  const OnSubmit = (data) => {
+    history.push({
+      pathname: "/main",
+      state:{detail: data}
+    });
+
   };
 
   return (
@@ -46,7 +47,7 @@ const Login = () => {
             {" "}
             Login
           </div>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(OnSubmit)}>
             <div className="ui form">
               <div
                 style={{

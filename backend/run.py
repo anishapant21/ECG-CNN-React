@@ -14,8 +14,11 @@ db=client.ecgdata
 class ecgMonitor(Document):
     value=FloatField()
     name=StringField()
+    contact=StringField()
+    guardian=StringField()
     age=IntField()
     sample_number=IntField()
+    doctor=StringField()
     result=IntField()
     resultFin=StringField()
     record_date= DateTimeField()
@@ -36,8 +39,9 @@ def hello_world():
     if request.method == 'POST':
         name=request.form['name']
         age=request.form['age']
+        doctor= request.form['doctor']
         db_datas=ecgMonitor.objects
-    return render_template('index.html', datas=db_datas, dateHere=datetime.now(), name=name, age=age)
+    return render_template('index.html', datas=db_datas, dateHere=datetime.now(), name=name, age=age, doctor=doctor)
 
 @app.route('/history')
 def history():
@@ -47,6 +51,12 @@ def history():
 @app.route('/logout')
 def front_page():
     return render_template('front.html')
+
+
+@app.route('/time')
+def get_current_time():
+    db_datas=ecgMonitor.objects
+    return {'doctor': db_datas[0].doctor, 'contact':db_datas[0].contact, 'guardian': db_datas[0].guardian}
 
 
 @app.route('/api/postdata', methods=['POST'])
@@ -74,6 +84,9 @@ def data_post_handler():
     print(current_date)
     db_cursor = ecgMonitor(value=float(post_data.get('value')),
      name=str(post_data.get('name')), 
+     doctor=str(post_data.get('doctor')),
+     contact= str(post_data.get('contact')),
+     guardian = str(post_data.get('guardian')),
      age=int(post_data.get('age')), 
      sample_number=int(post_data.get('sample_number')), 
      result=int(post_data.get('result')),

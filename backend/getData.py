@@ -104,7 +104,7 @@ print("result length i am", len(result_final))
 
 #Post data
 for i in range(ram):
-    data={"value":data_raw[i], "name":"Ann", "age":random.randint(40,50), "sample_number":i, "result":result_final[i]}
+    data={"value":data_raw[i], "name":"Ann", "age":random.randint(40,50), "sample_number":i, "doctor":"Rehan Joshi","contact":"982312345543","guardian":"Mr. Elliot Array", "result":result_final[i]}
     print("i did", i)
     reponse=requests.post('http://127.0.0.1:5000/api/postdata', json=data)
 
