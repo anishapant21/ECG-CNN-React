@@ -1,20 +1,28 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router-dom';
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useHistory,
+} from "react-router-dom";
 
 const Login = () => {
   //for the form
   const { register, handleSubmit } = useForm();
   //for routing
-  const history=useHistory();
+  const history = useHistory();
   const OnSubmit = (data) => {
     history.push({
       pathname: "/main",
-      state:{detail: data}
+      state: { detail: data },
     });
-
   };
+
+  // <img
+  //           className="ui fluid image"
+  //           src="https://health.clevelandclinic.org/wp-content/uploads/sites/3/2019/10/cardiacDocs-1125401691-770x553.jpg"
+  //         />
 
   return (
     <div className="ui two column grid container">
@@ -22,12 +30,7 @@ const Login = () => {
         <div
           style={{ minWidth: "800px", top: "150px", left: "10px" }}
           className="ui card"
-        >
-          <img
-            className="ui fluid image"
-            src="https://health.clevelandclinic.org/wp-content/uploads/sites/3/2019/10/cardiacDocs-1125401691-770x553.jpg"
-          />
-        </div>
+        ></div>
       </div>
 
       <div className="column">

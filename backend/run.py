@@ -2,6 +2,9 @@ from flask import Flask, render_template, request
 from datetime import datetime
 from mongoengine import connect, Document, StringField, IntField, FloatField, DateTimeField
 from pymongo import MongoClient
+from flask import jsonify
+from flask import make_response
+
 
 app= Flask(__name__)
 app.config['SECRET_KEY']='wanderlust'
@@ -22,6 +25,10 @@ class ecgMonitor(Document):
     result=IntField()
     resultFin=StringField()
     record_date= DateTimeField()
+
+
+
+
     
 
 def resultDecide(heartCheck):
@@ -55,8 +62,14 @@ def front_page():
 
 @app.route('/time')
 def get_current_time():
-    db_datas=ecgMonitor.objects
-    return {'doctor': db_datas[0].doctor, 'contact':db_datas[0].contact, 'guardian': db_datas[0].guardian}
+    db_datas=ecgMonitor.objects().to_json()
+    print("hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+    
+    return db_datas
+    #return {'doctor': db_datas[0].doctor, 'contact':db_datas[0].contact, 'guardian': db_datas[0].guardian}
+
+
+    
 
 
 @app.route('/api/postdata', methods=['POST'])
