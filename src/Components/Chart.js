@@ -79,6 +79,7 @@ const Chart = ({name, age, email}) => {
                 <Display data={currentDataPoint}/>
 
             </div>
+           
 
         </div>
     )

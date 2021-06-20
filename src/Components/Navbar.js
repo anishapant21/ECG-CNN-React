@@ -5,13 +5,13 @@ const Navbar = () => {
   return (
     <div style={{ display: "inline-flex" }}>
       <div
-        style={{ fontSize: "27px", fontFamily: "Raleway", color: 'black' }}
+        style={{ fontSize: "27px", fontFamily: "Raleway", color: '#1D4E89' }}
         className="ui large header"
       >
         ECG Heart Monitoring System
         <div className="logo">
           <i
-            style={{ color: "red", fontSize: "30px" }}
+            style={{ color:"#DA4167", fontSize: "30px" }}
             className="fas fa-hand-holding-heart"
           ></i>
           <span style={{ color: "gray", fontSize: "20px" }}>
@@ -34,7 +34,8 @@ const Navbar = () => {
             marginLeft: "0px",
             marginRight: "100px",
             fontFamily: "Exo 2",
-            hover:{backgroundColor:'yellow'}
+            backgroundColor:"#F79256"
+            
           }}
           className="menu active item"
         >
@@ -57,6 +58,7 @@ const Navbar = () => {
         style={{ marginLeft: "200px", marginRight: "2px" }}
         className="menu item"
       >
+        
        
     
       </div>
