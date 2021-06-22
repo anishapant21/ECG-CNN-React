@@ -18,7 +18,7 @@ const Accordion = ({items}) => {
         return(<React.Fragment key ={item.title}>
             <div className={`title ${active}`}
             onClick={()=> onTitleClick(index)} >
-                <i className="dropdown icon"></i>
+                <i style={{color:"#F26419", fontSize:"20px"}} className="dropdown icon"></i>
                 {item.title}
             </div>
             <div className={`content ${active}`}>

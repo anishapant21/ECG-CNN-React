@@ -6,9 +6,9 @@ import axios from 'axios';
 import Display from './Display';
 const Chart = ({name, age, email}) => {
 
-    const [currentDoctorName, setCurrentDoctorName]= useState('');
-    const [currentContact, setCurrentContact]= useState('');
-    const [currentGuardian, setCurrentGuardian]= useState('');
+    const [currentDoctorName, setCurrentDoctorName]= useState('Rehan Joshi');
+    const [currentContact, setCurrentContact]= useState('97643578990');
+    const [currentGuardian, setCurrentGuardian]= useState('Ash Array');
     const [currentDataPoint, setCurrentDataPoint]=useState();
     var newList=[];
     useEffect(()=>{
