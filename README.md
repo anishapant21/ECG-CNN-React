@@ -3,7 +3,7 @@
 
 The aim of this project is to obtain the systematic method of analayzing the Electrocardiogram (ECG) from the patients and display the type of disorders. It is designed to wirelessly interface the holter for ECG signal extracion and to process and classify the obtained data for disease diagnosis. 
 
-![Home page](.src/Images/Homepage.png)
+![Home page](src/Images/Homepage.png)
 
 
 ## Overview of the folders
