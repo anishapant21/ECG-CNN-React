@@ -1,22 +1,35 @@
 
 # Diagnosis of Cardiovascular Diseases with CNN using Data Obtained from Wireless Holter
 
-The aim of this project is to obtain the systematic method of analayzing the Electrocardiogram (ECG) from the patients and display the type of disorders. It is designed to wirelessly interface the holter for ECG signal extracion and to process and classify the obtained data for disease diagnosis. 
+The aim of this project is to design a systematic method of analayzing the Electrocardiogram (ECG) from patients and displaying the types of disorders. It is designed to wirelessly interface the holter for ECG signal extracion and to process and classify the obtained data for disease diagnosis. 
 
 ![Home page](src/Images/Homepage.png)
 
 
 ## Overview of the folders
 
-1. Model contains the code from data preprocessing to training of the different models using SVM classifier, Logistic Regression, KNN classifier and CNN.
+### 1. Model <br />
+Data preprocessing and training of the different models using SVM classifier, Logistic Regression, KNN classifier and CNN.
 
-2. SavedModel contains the CNN model.
+| Models | Train Accuracy | Test Accuracy | Precision | Recall | F1-Score
+| :---         |     :---:      |          :---: | :---:        |     :---:      |          :---: |
+|SVM | 98.22% | 96% | 98.53% | 92.37% | 93.84% 
+| Logistic Regression | 90.73% | 79% | 73.85% | 65.33% | 68.5%
+| KNN | 100% | 100% | 100% | 100% | 100%
+|CNN | 99.77% | 99.67% | 100% | 100% | 100%
 
-3. TestData contains the heart signals of a normal person without any underlying heart disease obtained using holter.
+### 2. SavedModel <br />
+Saved the CNN model in `.h5` format
 
-4. backend contains the code for getting raw data, use of database, processing and using the saved CNN model to predict the outcomes.
+### 3. TestData <br />
+Csv files containing heart signals of a normal person without any underlying heart disease (obtained using holter).
 
-5. src and public folder conatins the code used for the frontend in reactjs.
+### 4. backend
+Use of database, process the raw ecg signals and use of the saved CNN model to predict the outcomes
+
+
+### 5. src and public folder
+Frontend in reactjs.
 
 
 ## Installation
