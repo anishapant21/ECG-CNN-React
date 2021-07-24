@@ -12,21 +12,23 @@ The aim of this project is to obtain the systematic method of analayzing the Ele
 
 2. SavedModel contains the CNN model.
 
-3. backend contains the code for getting raw data, use of database, processing and using the saved CNN model to predict the outcomes.
+3. TestData contains the heart signals of a normal person without any underlying heart disease obtained using holter.
 
-4. src and public folder conatins the code used for the frontend in reactjs.
+4. backend contains the code for getting raw data, use of database, processing and using the saved CNN model to predict the outcomes.
+
+5. src and public folder conatins the code used for the frontend in reactjs.
 
 
 ## Installation
 
 1. Create a virtual enviroment inside the backend directory.
 
-2. Install the requirements.txt inside the virtual environment using:
- pip install -r requirements.txt
+2. Install the requirements.txt inside the virtual environment using: <br />
+ `$ pip install -r requirements.txt`
 
-3. Run
-python run.py
-python getData.py
+3. Run <br />
+`$ python run.py` <br />
+`$ python getData.py`
 
-4. In the main directory run
-npm start
+4. In the main directory run <br />
+`$ npm start`
