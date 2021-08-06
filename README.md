@@ -13,13 +13,14 @@ Data preprocessing and training of the different models using SVM classifier, Lo
 
 | Models | Train Accuracy | Test Accuracy | Precision | Recall | F1-Score
 | :---         |     :---:      |          :---: | :---:        |     :---:      |          :---: |
-|SVM | 98.22% | 96% | 98.53% | 92.37% | 93.84% 
-| Logistic Regression | 90.73% | 79% | 73.85% | 65.33% | 68.5%
-| KNN | 100% | 100% | 100% | 100% | 100%
-|CNN | 99.77% | 99.67% | 100% | 100% | 100%
+|SVM | 98.56% | 96% | 98.59% | 98.56% | 98.57% 
+| Logistic Regression | 89.05% | 74% | 89.03% | 89.06% | 89.03%
+|CNN | 99.8% | 99.67% | 100% | 100% | 100%
+
+[Link to the model training repo.](https://github.com/eternal-moon/ECG-Arrythmia)
 
 ### 2. SavedModel <br />
-Saved the CNN model in `.h5` format
+Saved CNN model in `.h5` format
 
 ### 3. TestData <br />
 Csv files containing heart signals of a normal person without any underlying heart disease (obtained using holter).
