@@ -1,7 +1,7 @@
 
 # Diagnosis of Cardiovascular Diseases with CNN using Data Obtained from Wireless Holter
 
-The aim of this project is to design a systematic method of analayzing the Electrocardiogram (ECG) from patients and displaying the types of disorders. It is designed to wirelessly interface the holter for ECG signal extracion and to process and classify the obtained data for disease diagnosis. 
+The aim of this project is to design a systematic method of analyzing the Electrocardiogram (ECG) from patients and displaying the types of disorders. It is designed to wirelessly interface the holter for ECG signal extracion and to process and classify the obtained data for disease diagnosis. 
 
 ![Home page](src/Images/Homepage.png)
 
